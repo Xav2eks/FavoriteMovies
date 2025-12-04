@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import Header from './components/Header'
-
+import { useState } from "react";
+import Header from "./components/Header";
+import CreateInput from "./components/CreateInput";
 
 function App() {
   return (
-    <div>
+    <div className="main-container">
       <Header />
+      <body>
+        <CreateInput />
+      </body>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
