@@ -50,3 +50,13 @@ header {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  width: fit-content;
+  padding: 4px 12px 4px 12px;
+}
