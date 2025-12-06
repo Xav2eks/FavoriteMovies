@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="main-container">
       <Header />
-      <body>
-        <CreateInput />
-      </body>
+      <CreateInput />
     </div>
   );
 }
