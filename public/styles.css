@@ -60,3 +60,13 @@ header {
   width: fit-content;
   padding: 4px 12px 4px 12px;
 }
+
+.moviesListContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.movieContainer {
+  padding: 8px;
+  background-color: red;
+}
