@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 
 function CreateInput(props) {
   const [titleInput, setTitleInput] = useState("");
+  const [imageInput, setImageInput] = useState("");
   const [commentInput, setCommentInput] = useState("");
 
   const [movie, setMovie] = useState({
@@ -15,6 +16,12 @@ function CreateInput(props) {
     setTitleInput(titleValue);
   }
 
+  function handleImageInput(event) {
+    const imageValue = event.target.value;
+
+    setImageInput(imageValue);
+  }
+
   function handleCommentInput(event) {
     const commentValue = event.target.value;
 
@@ -24,6 +31,7 @@ function CreateInput(props) {
   function handleAddMovie() {
     const movie = {
       title: titleInput,
+      image: imageInput,
       comment: commentInput,
     };
 
@@ -39,6 +47,15 @@ function CreateInput(props) {
           onChange={handleTitleInput}
           name="title"
           value={titleInput}
+        />
+      </div>
+      <div className="image-input-container">
+        <p>Image-Url:</p>
+        <input
+          placeholder="PASTE IMG-URL"
+          onChange={handleImageInput}
+          name="img-url"
+          value={imageInput}
         />
       </div>
       <div className="comment-input-container">

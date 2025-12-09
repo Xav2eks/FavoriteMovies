@@ -23,6 +23,7 @@ function App() {
           return (
             <MovieItem
               key={index}
+              image={movie.image}
               title={movie.title}
               comment={movie.comment}
             />
