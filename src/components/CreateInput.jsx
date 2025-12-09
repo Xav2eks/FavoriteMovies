@@ -36,6 +36,10 @@ function CreateInput(props) {
     };
 
     props.onAdd(movie);
+
+    setTitleInput("");
+    setImageInput("");
+    setCommentInput("");
   }
 
   return (
