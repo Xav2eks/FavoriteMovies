@@ -68,6 +68,8 @@ function CreateInput(props) {
           onChange={handleCommentInput}
           name="comment"
           value={commentInput}
+          rows={3}
+          placeholder="ADD YOUR COMMENT"
         />
       </div>
       <div className="button-container">

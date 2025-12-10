@@ -41,6 +41,7 @@ header {
   background-color: #fdf5c9;
   padding: 12px;
   border-radius: 4px;
+  box-shadow: 0 5px 5px rgb(138, 137, 137);
 }
 
 .input-container input,

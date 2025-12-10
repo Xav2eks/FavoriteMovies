@@ -14,6 +14,14 @@ function App() {
     console.log(movieArray);
   }
 
+  function deleteMovie(id) {
+    setMovieArray((prevValue) => {
+      return prevValue.filter((movie, index) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
     <div className="main-container">
       <Header />
@@ -23,9 +31,11 @@ function App() {
           return (
             <MovieItem
               key={index}
+              id={index}
               image={movie.image}
               title={movie.title}
               comment={movie.comment}
+              onDelete={deleteMovie}
             />
           );
         })}
