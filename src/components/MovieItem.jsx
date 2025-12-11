@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 
-function movieItem(props) {
+function MovieItem(props) {
 
   function handleDelete () {
     props.onDelete(props.id)
@@ -10,10 +10,10 @@ function movieItem(props) {
     <div className="movieItem">
       <img src={props.image}></img>
       <h2>{props.title}</h2>
-      <p>{props.comment}</p>
+      <p className="movieParagraph">{props.comment}</p>
       <button onClick={handleDelete}>DELETE</button>
     </div>
   );
 }
 
-export default movieItem;
+export default MovieItem;

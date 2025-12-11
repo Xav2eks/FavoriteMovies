@@ -21,6 +21,8 @@ h1 {
 }
 
 header {
+  display: flex;
+  justify-content: center;
   background-color: #2f3a60;
   padding: 8px;
   border-bottom: 1px solid rgba(156, 156, 156, 0.74);
@@ -36,7 +38,7 @@ header {
   width: 30%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  align-self: center;
   gap: 12px;
   background-color: #fdf5c9;
   padding: 12px;
@@ -84,9 +86,9 @@ header {
 
 .moviesListContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 90%;
-  margin: 0 auto;
+  align-self: center;
   gap: 32px;
 }
 
@@ -102,12 +104,13 @@ header {
   background-color: #f6ebe8;
   padding: 12px;
   border-radius: 12px;
+  max-width: 350px;
 }
 
 .movieItem > img {
   width: 200px;
   height: 200px;
-  margin: auto;
+  align-self: center;
 }
 
 .movieItem h2 {
@@ -115,6 +118,7 @@ header {
   font-size: 18px;
   font-weight: 700;
   color: #2f3a60;
+  word-wrap: break-word;
 }
 
 .movieItem p {
@@ -123,12 +127,14 @@ header {
   font-weight: 400;
   line-height: 1.4;
   color: #444b54;
+  color: red;
+  word-wrap: break-word;
 }
 
 .movieItem button {
   width: fit-content;
   padding: 4px;
-  margin-left: auto;
+  align-self: end;
   background-color: #e26a6a;
   border: none;
   color: white;
