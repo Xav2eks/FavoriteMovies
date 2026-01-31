@@ -148,7 +148,7 @@ header {
 }
 
 .home-container {
-  height: 100vh;;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -183,4 +183,8 @@ header {
 .app-button:hover {
   background-color: #87b2db;
   box-shadow: 0 0 4px rgba(47, 58, 96, 0.4);
+}
+
+.header-container {
+  text-decoration: none;
 }
