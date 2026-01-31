@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import CreateInput from "./components/CreateInput";
 import MovieItem from "./components/MovieItem";
 
 function App() {
-  const [movieArray, setMovieArray] = useState([]);
+  const [movieArray, setMovieArray] = useState(() => {
+    const savedMovies = localStorage.getItem("movies");
+    return savedMovies ? JSON.parse(savedMovies) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("movies", JSON.stringify(movieArray));
+  }, [movieArray]);
 
   function handleAdd(movie) {
     setMovieArray((prevValue) => {
